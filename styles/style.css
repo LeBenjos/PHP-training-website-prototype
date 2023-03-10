@@ -1,0 +1,489 @@
+/* FONTS */
+/* ---------------------------------------------------------------- */
+    /* Regular */
+    /* -------------------------------- */
+        @font-face {
+            font-family:"roboto-condensed";
+            src:url("https://use.typekit.net/af/ea559d/00000000000000007735a08d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/ea559d/00000000000000007735a08d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/ea559d/00000000000000007735a08d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+            font-display:auto;
+            font-style:normal;
+            font-weight:400;
+            font-stretch:normal;
+        }
+
+    /* Italic */
+    /* -------------------------------- */
+        @font-face {
+            font-family:"roboto-condensed-italic";
+            src:url("https://use.typekit.net/af/2876c8/00000000000000007735a08c/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/2876c8/00000000000000007735a08c/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/2876c8/00000000000000007735a08c/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+            font-display:auto;
+            font-style:italic;
+            font-weight:400;
+            font-stretch:normal;
+        }
+
+    /* Bold */
+    /* -------------------------------- */
+        @font-face {
+            font-family:"roboto-condensed-bold";
+            src:url("https://use.typekit.net/af/386c0d/00000000000000007735a09d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/386c0d/00000000000000007735a09d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/386c0d/00000000000000007735a09d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+            font-display:auto;
+            font-style:normal;
+            font-weight:700;
+            font-stretch:normal;
+        }
+
+    /* Bold Italic */
+    /* -------------------------------- */
+        @font-face {
+            font-family:"roboto-condensed-bol-italic";
+            src:url("https://use.typekit.net/af/3eafcb/00000000000000007735a092/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff2"),url("https://use.typekit.net/af/3eafcb/00000000000000007735a092/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff"),url("https://use.typekit.net/af/3eafcb/00000000000000007735a092/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("opentype");
+            font-display:auto;
+            font-style:italic;
+            font-weight:700;
+            font-stretch:normal;
+        }
+/* ---------------------------------------------------------------- */
+
+/* ROOTS */
+/* ---------------------------------------------------------------- */
+    :root{
+        /* COLORS */
+        --primary: #0A0A0A;
+        --secondary: #FAFAFA;
+        /* FONT & SIZE */
+        --font: "roboto-condensed", sans-serif;
+        --font_size: 18px;
+        /* WIDTH */
+        --width: 100vw;
+    }
+/* ---------------------------------------------------------------- */
+
+/* COMMON CSS */
+/* ---------------------------------------------------------------- */
+    *{
+        box-sizing: border-box;
+    }
+
+    html,body{
+        margin: 0;
+        font-family: var(--font);
+        font-size: var(--font_size);
+    }
+
+    body{
+        width: var(--width);
+        height: 100vh;
+        background-color: var(--primary);
+        color: var(--secondary);
+        overflow: hidden;
+    }
+
+    .home{
+        position: relative;
+    }
+/* ---------------------------------------------------------------- */
+
+/* HEADER */ 
+/* ---------------------------------------------------------------- */
+    header{
+        width: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 70px;
+        z-index: 1;
+    }
+
+    /* NAVIGATION */
+    /* -------------------------------- */
+        header nav{
+            position: absolute;
+            left: 0;
+        }
+
+        header nav a{
+            display: inline-block;
+            color: var(--secondary);
+            text-decoration: none;
+            margin: 0 0 0 20px;
+            text-transform: uppercase;
+        }
+
+        header nav a.here{
+            border-bottom: 2px solid var(--secondary);
+            padding: 0 1px;
+        }
+
+        header nav a:not(.here){
+            opacity: 0.5;
+            transition: opacity 0.25s ease-in-out;
+        }
+
+        header nav a:not(.here):hover{
+            opacity: 1;
+            transition: opacity 0.25s ease-in-out;
+        }
+
+        header nav a:not(.here):after{
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: width 0.3s ease-in-out;
+        }
+
+        header nav a:not(.here):hover:after{  
+            width: 100%; 
+        }
+
+    /* LOGO */
+    /* -------------------------------- */
+        header h1{
+            /* LINK : background: center / 100% no-repeat url(../assets/images/jacker_logo_white.png); */
+            /* INCLUDE : */ 
+            background: center / 100% no-repeat url(./assets/images/jacker_logo_white.png);
+            height: inherit;
+            width: 100px;
+            margin: 0;
+        }
+
+    /* MOBILE HAMBURGER MENU */
+    /* -------------------------------- */
+        header .mobile{
+            height: 70px;
+            width: 100vw;
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 8px;
+            margin: 0;
+            padding-left: 10px;
+            background-color: var(--primary);
+            transition: all 0.5s ease-in-out;
+        }
+
+        header .mobile.cross{
+            gap: 0;
+        }
+
+        header .mobile span{
+            background: var(--secondary);
+            height: 4px;
+            width: 40px;
+            border-radius: 5px;
+            opacity: 1;
+            transition: all 0.5s ease-in-out;
+        }
+
+        header .cross span:nth-child(1){
+            transform: translateY(3px) rotate(45deg);
+        }
+
+        header .cross span:nth-child(2){
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+
+        header .cross span:nth-child(3){
+            transform: translateY(-3px) rotate(-45deg);
+        }
+/* ---------------------------------------------------------------- */
+
+/* MAIN */
+/* ---------------------------------------------------------------- */
+    /* HOME PAGE */
+    /* -------------------------------- */
+        .home main{
+            width: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* TITLE */
+        /* -------------------------------- */
+            .home .ready-to-live{
+                margin-top: 15px;
+                text-align: center;
+            }
+
+            .home .ready-to-live h2{
+                font-size: 6vw;
+                margin: 0;
+                letter-spacing: 3px;
+            }
+
+            .home .ready-to-live h2:nth-child(2){
+                margin: -2.5vw 0 0 0;
+                background: var(--secondary);
+                color: var(--primary);
+                background-clip: text;
+                -webkit-text-stroke-color: transparent;
+                -webkit-text-stroke-width: calc(1em / 16);
+                -webkit-background-clip: text;
+                /* Other way */
+                /* text-shadow: -4px 4px 0 var(--secondary), 4px 4px 0 var(--secondary), 4px -4px 0 var(--secondary), -4px -4px 0 var(--secondary); */
+                /* -webkit-text-stroke: 1px var(--secondary); */
+            }
+
+        /* GALLERY */
+        /* -------------------------------- */
+            .home .gallery{
+                width: calc(100% - 20px);
+                display: grid;
+                grid-template: 100% / 1fr 1fr 1fr;
+                gap: 10px;
+                margin: 35px 10px;
+            }
+
+            .home .gallery div{
+                height: 70vh;
+            }
+
+            .home .gallery div:nth-child(1){
+                /* LINK : background: center / cover no-repeat url(../assets/images/lookbook1.webp); */
+                /* INCLUDE : */
+                background: center / cover no-repeat url(./assets/images/lookbook1.webp);
+                grid-area: 1 / 1 / 1 / 1;
+            }
+
+            .home .gallery div:nth-child(2){
+                /* LINK : background: center / cover no-repeat url(../assets/images/lookbook2.webp); */
+                /* INCLUDE : */
+                background: center / cover no-repeat url(./assets/images/lookbook2.webp);
+                grid-area: 1 / 2 / 1 / 2;
+            }
+
+            .home .gallery div:nth-child(3){
+                /* LINK : background: center / cover no-repeat url(../assets/images/lookbook3.webp); */
+                /* INCLUDE : */
+                background: center / cover no-repeat url(./assets/images/lookbook3.webp);
+                grid-area: 1 / 3 / 1 / 3;
+            }
+/* ---------------------------------------------------------------- */
+
+/* FOOTER */
+/* ---------------------------------------------------------------- */
+    footer{
+        background: var(--primary);
+        width: inherit;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-top: 2px solid rgba(250, 250, 250, 0.5);
+    }
+
+    footer p{
+        margin: 10px 10px 5px 10px;
+        padding: 10px;
+    }
+
+    footer div{
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    footer div a{
+        font-family: "roboto-condensed-bold", sans-serif;
+        color: var(--secondary);
+        text-decoration: none;
+        display: inline-block;
+        border-bottom: none;
+    }
+
+    footer div a:after{
+        content: '';
+        display:block;
+        border-bottom: solid 2px var(--secondary);  
+        transform: scaleX(0);  
+        transition: transform 0.25s ease-in-out;
+    }
+
+    footer div a:hover::after{
+        transform: scaleX(1);
+    }
+/* ---------------------------------------------------------------- */
+
+/* RESPONSIVE */
+/* ---------------------------------------------------------------- */
+    /* WIDE SCREEN */
+    /* -------------------------------- */
+    @media screen and (min-width: 2000px){
+        /* COMMON */
+        /* -------------------------------- */
+            html{
+                width: 100vw;
+                display: flex;
+                justify-content: center;
+                background-color: #1C1C1C;
+            }
+
+            body{
+                width: 2000px;
+            }
+        
+        /* MAIN */
+        /* -------------------------------- */
+            .home .ready-to-live h2{
+                font-size: 120px;
+            }
+
+            .home .ready-to-live h2:nth-child(2){
+                margin: -50px 0 0 0;
+            }
+
+            .home .gallery div{
+                height: 930px;
+            }
+    }
+
+    /* TABLET */
+    /* -------------------------------- */
+    @media screen and (max-width: 1000px){
+        /* HEADER */
+        /* -------------------------------- */
+            header {
+                justify-content: space-between;
+            }
+
+            header nav {
+                position: unset;
+            }
+
+            header h1 {
+                margin: 0 10px 0 0;
+                position: absolute;
+                right: 0;
+            }
+
+        /* MAIN */
+        /* -------------------------------- */
+            .home main{
+                height: 100vh;
+                position: absolute;
+                top: 0;
+            }
+            
+            .home .ready-to-live{
+                position: absolute;
+                margin: 0;
+            }
+            
+            .home .ready-to-live h2{
+                font-size: 11vw;
+            }
+            
+            .home .gallery{
+                display: flex;
+                height: 70vh;
+                flex-wrap: nowrap;
+                position: relative;
+                overflow: hidden;
+                gap: 0;
+            }
+
+            .home .gallery div:nth-child(1), 
+            .home .gallery div:nth-child(2), 
+            .home .gallery div:nth-child(3){
+                background-position: top;
+                width: 100%;
+                position: absolute;
+                overflow: hidden;
+                z-index: -1;
+            }
+
+            .home .gallery.g1 div:nth-child(1){
+                opacity: 1;
+                transition: all 0.5s ease-in-out;
+            }
+
+            .home .gallery.g1 div:nth-child(2){
+                transform: translateX(calc(100% + 20px));
+                opacity: 0;
+            }
+        
+            .home .gallery.g1 div:nth-child(3){
+                transform: translateX(calc(-100% - 20px));
+                opacity: 0;
+                transition: all 0.5s ease-in-out;
+            }
+
+            .home .gallery.g2 div:nth-child(1){
+                transform: translateX(calc(-100% - 20px));
+                opacity: 0;
+                transition: all 0.5s ease-in-out;
+            }
+        
+            .home .gallery.g2 div:nth-child(2){
+                opacity: 1;
+                transition: all 0.5s ease-in-out;
+            }
+        
+            .home .gallery.g2 div:nth-child(3){
+                transform: translateX(calc(100% + 20px));
+                opacity: 0;
+            }
+
+            .home .gallery.g3 div:nth-child(1){
+                transform: translateX(calc(100% + 20px));
+                opacity: 0;
+            }
+        
+            .home .gallery.g3 div:nth-child(2){
+                transform: translateX(calc(-100% - 20px));
+                opacity: 0;
+                transition: all 0.5s ease-in-out;
+            }
+        
+            .home .gallery.g3 div:nth-child(3){
+                opacity: 1;
+                transition: all 0.5s ease-in-out;
+            }
+    }
+
+    /* MOBILE */
+    /* -------------------------------- */
+    @media screen and (max-width: 425px){    
+        /* HEADER */
+        /* -------------------------------- */
+            header .mobile{
+                display: flex;
+            }
+        
+            header nav{
+                background-color: var(--primary);
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                position: absolute;
+                opacity: 0;
+                bottom: 0;
+                transition: all 0.5s ease-in-out;
+                z-index: -1;
+                border-bottom: 2px solid rgba(250, 250, 250, 0.5);
+            }
+        
+            header nav.open{
+                opacity: 1;
+                bottom: -188px;
+            }
+
+            header nav a, header nav a.here{
+                padding: 5px 0;
+                margin: 10px 10px 10px 10px;
+            }
+        /* MAIN */
+        /* -------------------------------- */
+            .home .ready-to-live{
+                top: 33vh;
+            }
+    }
+/* ---------------------------------------------------------------- */
