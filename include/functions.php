@@ -49,37 +49,37 @@ function products(){
     // ----------------------------------------------------------------
     $products = [
         [
-            "name" => "Produits n°1", 
-            "description" => "description n°1", 
+            "name" => "TRAIN SURFING - LONG SLEEVES", 
+            "description" => "100% cotton | 210gsm | Silkscreen front, back and sleeve | Secret print | Wide cut, if hesitating between two sizes, take below", 
             "img" => [
                 "frontimg" => "./assets/products/cloth1.2.webp",
                 "frontalt" => "FRONT TRAIN SURFING - LONG SLEEVES - BLACK",
                 "backimg" => "./assets/products/cloth1.1.webp",
                 "backalt" => "BACK TRAIN SURFING - LONG SLEEVES - BLACK",
             ],
-            "price" => "prix n°1",
+            "price" => "55€",
         ],
         [
-            "name" => "Produits n°2", 
-            "description" => "description n°2", 
+            "name" => "UNDERGROUND - HOODIE - BLACK", 
+            "description" => "100% cotton | 410gsm | Screen print front and back | Secret Label | Wide cut, if hesitating between two sizes, take below", 
             "img" => [
                 "frontimg" => "./assets/products/cloth2.2.webp",
                 "frontalt" => "FRONT UNDERGROUND - HOODIE - BLACK",
                 "backimg"  => "./assets/products/cloth2.1.webp",
                 "backalt" => "BACK UNDERGROUND - HOODIE - BLACK",
             ],
-            "price" => "prix n°2",
+            "price" => "95€",
         ],
         [
-            "name" => "Produits n°3", 
-            "description" => "description n°3", 
+            "name" => "RTL STRIPED POLO - MULTI", 
+            "description" => "100% cotton | All Over pattern | Wide cut, if hesitating between two sizes, take below", 
             "img" => [
                 "frontimg" => "./assets/products/cloth3.1.webp",
                 "frontalt" => "FRONT RTL STRIPED POLO",
                 "backimg"  => "./assets/products/cloth3.2.webp",
                 "backalt" => "BACK RTL STRIPED POLO",
             ],
-            "price" => "prix n°3",
+            "price" => "80€",
         ], 
     ];
     // ----------------------------------------------------------------
