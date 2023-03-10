@@ -41,6 +41,9 @@ Create a website with 3 pages :
 Contact Page
 - Creat a form with HTML & PHP
 
+#### BONUS
+Customize your website with CSS and JS
+
 ## Sources
 - The clothing brand : [Jacker]()
 - The inspiration for the model’s design : [BEnjamin Code | Challenge : 1h pour coder et animer ça avec HTML et CSS](https://www.youtube.com/watch?v=F7-ERpRj3z8)
