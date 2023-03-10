@@ -60,7 +60,7 @@ function products(){
             "price" => "55€",
         ],
         [
-            "name" => "UNDERGROUND - HOODIE - BLACK", 
+            "name" => "UNDERGROUND - HOODIE", 
             "description" => "100% cotton | 410gsm | Screen print front and back | Secret Label | Wide cut, if hesitating between two sizes, take below", 
             "img" => [
                 "frontimg" => "./assets/products/cloth2.1.webp",
@@ -71,7 +71,7 @@ function products(){
             "price" => "95€",
         ],
         [
-            "name" => "RTL STRIPED POLO - MULTI", 
+            "name" => "RTL STRIPED - POLO", 
             "description" => "100% cotton | All Over pattern | Wide cut, if hesitating between two sizes, take below", 
             "img" => [
                 "frontimg" => "./assets/products/cloth3.1.webp",
@@ -82,7 +82,7 @@ function products(){
             "price" => "80€",
         ],
         [
-            "name" => "TITS ATTACK - LONG SLEEVES - BEIGE", 
+            "name" => "TITS ATTACK - LONG SLEEVES", 
             "description" => "100% cotton | 210gsm | Silkscreen front, back and sleeve | Secret print | Wide cut, if hesitating between two sizes, take below", 
             "img" => [
                 "frontimg" => "./assets/products/cloth4.1.webp",
@@ -93,7 +93,7 @@ function products(){
             "price" => "55€",
         ],
         [
-            "name" => "GENTLEMEN CLUB - SHIRT - BEIGE", 
+            "name" => "GENTLEMEN CLUB - SHIRT", 
             "description" => "100% cotton flannel | All Over Pattern | Embroidered Jacker logos", 
             "img" => [
                 "frontimg" => "./assets/products/cloth5.1.webp",
@@ -104,15 +104,15 @@ function products(){
             "price" => "95€",
         ],
         [
-            "name" => "STORK CORDUROY - OVERSHIRT - BLACK", 
+            "name" => "STORK CORDUROY - OVERSHIRT", 
             "description" => "100% cotton corduroy | 100% cotton poplin lining | Embroidery | Wide cut, if hesitating between two sizes, take below", 
             "img" => [
                 "frontimg" => "./assets/products/cloth6.1.jpeg",
                 "frontalt" => "FRONT STORK CORDUROY - OVERSHIRT - BLACK",
-                "backimg"  => "./assets/products/cloth6.2.webp",
+                "backimg"  => "./assets/products/cloth6.2.jpeg",
                 "backalt" => "BACK STORK CORDUROY - OVERSHIRT - BLACK",
             ],
-            "price" => "80€",
+            "price" => "130€",
         ],
     ];
     // ----------------------------------------------------------------

@@ -9,7 +9,10 @@
             <article class="products">
                 <h3><?= $product["name"] ?></h3>
                 <p><?= $product["description"] ?></p>
-                <img src="<?= $product["img"]["frontimg"] ?>" alt="<?= $product["img"]["frontalt"] ?>">
+                <div>
+                    <img src="<?= $product["img"]["frontimg"] ?>" alt="<?= $product["img"]["frontalt"] ?>">
+                    <img src="<?= $product["img"]["backimg"] ?>" alt="<?= $product["img"]["frontalt"] ?>" class="back">
+                </div>
                 <strong><?= $product["price"] ?></strong>
             </article>
         <?php endforeach;?>
