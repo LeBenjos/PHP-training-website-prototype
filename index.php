@@ -1,4 +1,4 @@
-<?php include_once "include/functions.php";
+<?php include_once "./include/functions.php";
     [$titre, $page, $body, $headerlinks, $collection] = home();
 ?><?php include "./include/head.php"; ?>
     <main>
