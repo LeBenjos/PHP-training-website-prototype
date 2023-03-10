@@ -51,24 +51,36 @@ function products(){
         [
             "name" => "Produits n°1", 
             "description" => "description n°1", 
-            "img" => "...",
-            "alt" => "img 1", 
+            "img" => [
+                "frontimg" => "./assets/products/cloth1.2.webp",
+                "frontalt" => "FRONT TRAIN SURFING - LONG SLEEVES - BLACK",
+                "backimg" => "./assets/products/cloth1.1.webp",
+                "backalt" => "BACK TRAIN SURFING - LONG SLEEVES - BLACK",
+            ],
             "price" => "prix n°1",
-        ], 
+        ],
         [
             "name" => "Produits n°2", 
             "description" => "description n°2", 
-            "img" => "...",
-            "alt" => "img 2", 
+            "img" => [
+                "frontimg" => "./assets/products/cloth2.2.webp",
+                "frontalt" => "FRONT UNDERGROUND - HOODIE - BLACK",
+                "backimg"  => "./assets/products/cloth2.1.webp",
+                "backalt" => "BACK UNDERGROUND - HOODIE - BLACK",
+            ],
             "price" => "prix n°2",
         ],
         [
             "name" => "Produits n°3", 
             "description" => "description n°3", 
-            "img" => "...",
-            "alt" => "img 3", 
+            "img" => [
+                "frontimg" => "./assets/products/cloth3.1.webp",
+                "frontalt" => "FRONT RTL STRIPED POLO",
+                "backimg"  => "./assets/products/cloth3.2.webp",
+                "backalt" => "BACK RTL STRIPED POLO",
+            ],
             "price" => "prix n°3",
-        ],
+        ], 
     ];
     // ----------------------------------------------------------------
 
