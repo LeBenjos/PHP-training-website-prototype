@@ -3,7 +3,8 @@
 ?><?php include "./include/head.php"; ?>
     <main>
         <div class="ready-to-live">
-            <h2><?= "$titre | $collection" ?> </h2>
+            <h2><span><?= $titre ?></span><?= " |" ?></h2>
+            <h2><?= $collection ?></h2>
         </div>
         <?php foreach($products as $product) : ?>
             <article class="products">
