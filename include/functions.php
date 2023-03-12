@@ -140,8 +140,9 @@ function contact(){
     // MAIN
     // ----------------------------------------------------------------
     $informations = [
-        "Pour toutes questions relatives à une commande, merci d'indiquer votre Numéro de commande afin que nous puissions vous renseigner plus facilement.", 
-        "Si vous nous avez contacté mais n'avez pas reçu de réponse, pensez à vérifier vos indésirables/spams, au cas où nos e-mails y atterrissent.",
+        "For all inquiries relative to your order, please indicate your order number to help us help you more easily.", 
+        "If you already contacted us, but did'nt get any answer yet, please check your spams, just in case.",
+        "This is a fake form for the protoype. Thanks",
     ];
     // ----------------------------------------------------------------
 
@@ -164,6 +165,14 @@ function footer(){
     // ----------------------------------------------------------------
 
     return [$description, $jacker, $connector, $benjamin];
+}
+
+function contactWait(){
+    include "./include/contact_get.php";
+}
+
+function contactSend(){
+    echo "POST";
 }
 
 ?>
