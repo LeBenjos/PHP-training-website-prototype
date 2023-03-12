@@ -40,7 +40,7 @@ Create a website with 3 pages :
 
 ### Part3
 Contact Page
-- Creat a form with HTML & PHP
+- Creat a form with HTML & PHP | **OK**
 
 ### BONUS
 Customize your website with CSS and JS

@@ -253,8 +253,12 @@
             margin-top: 70px;
             position: relative;
             gap: 10px;
-            overflow: hidden;
             animation: spawnMain 1s ease-in-out;
+        }
+
+        main.post{
+            margin: 70px 0;
+            overflow: hidden;
         }
 
         @keyframes spawnMain {
@@ -331,7 +335,7 @@
                 clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
             }
 
-            /* ----- HOME ----- */
+            /* ----- CONTACT ----- */
             .contact h2{
                 margin: 0;
                 font-family: "roboto-condensed-bold-italic", sans-serif;
@@ -340,6 +344,12 @@
                 letter-spacing: 3px;
                 position: relative;
                 animation: spawnH2 1s ease-in-out;
+            }
+
+            .contact h2.thanks{
+                text-align: center;
+                margin: 0 10px;
+                text-transform: uppercase;
             }
 
             @keyframes spawnH2 {
@@ -449,63 +459,63 @@
             
         /* CONTACT : FORM */
         /* -------------------------------- */
-        .contact ul li:nth-child(3){
-            font-family: "roboto-condensed-bold", sans-serif;
-            text-transform: uppercase;
-        }
+            .contact ul li:nth-child(3){
+                font-family: "roboto-condensed-bold", sans-serif;
+                text-transform: uppercase;
+            }
 
-        .contact form{
-            display: grid;
-            grid-template: auto / 5fr 1fr 5fr;
-            gap: 10px;
-            margin: 25px 10vw 10px;
-            width: calc(100% - 20vw);
-        }
+            .contact form{
+                display: grid;
+                grid-template: auto / 5fr 1fr 5fr;
+                gap: 10px;
+                margin: 25px 10vw 10px;
+                width: calc(100% - 20vw);
+            }
 
-        .contact #name, .contact #mail, .contact #message{
-            background: var(--primary);
-            color: var(--secondary);
-            border: none;
-            border-bottom: 1px solid var(--secondary);
-            font-family: "roboto-condensed", sans-serif;
-            font-size: 18px;
-        }
+            .contact #name, .contact #mail, .contact #message{
+                background: var(--primary);
+                color: var(--secondary);
+                border: none;
+                border-bottom: 1px solid var(--secondary);
+                font-family: "roboto-condensed", sans-serif;
+                font-size: 18px;
+            }
 
-        .contact #name{
-            grid-area: 1 / 1 / 1 / 1;
-            
-        }
+            .contact #name{
+                grid-area: 1 / 1 / 1 / 1;
+                
+            }
 
-        .contact #mail{
-            grid-area: 1 / 3 / 1 / 3;
-        }
+            .contact #mail{
+                grid-area: 1 / 3 / 1 / 3;
+            }
 
-        .contact #message{
-            grid-area: 2 / 1 / 2 / 4;
-            height: 30vh;
-        }
+            .contact #message{
+                grid-area: 2 / 1 / 2 / 4;
+                height: 30vh;
+            }
 
-        .contact #send{
-            position: absolute;
-            bottom: -75px;
-            height: 50px;
-            width: 125px;
-            right: 10vw;
-            background-color: var(--primary);
-            color: var(--secondary);
-            font-family: "roboto-condensed", sans-serif;
-            font-size: 18px;
-            border: 3px solid var(--secondary);
-            border-radius: 15px;
-            padding: 0 0;
-            transition: all 0.25s ease-in-out;
-        }
+            .contact #send{
+                position: absolute;
+                bottom: -75px;
+                height: 50px;
+                width: 125px;
+                right: 10vw;
+                background-color: var(--primary);
+                color: var(--secondary);
+                font-family: "roboto-condensed", sans-serif;
+                font-size: 18px;
+                border: 3px solid var(--secondary);
+                border-radius: 15px;
+                padding: 0 0;
+                transition: all 0.25s ease-in-out;
+            }
 
-        .contact #send:hover{
-            background-color: var(--secondary);
-            color: var(--primary);
-            font-family: "roboto-condensed-bold", sans-serif;
-        }
+            .contact #send:hover{
+                background-color: var(--secondary);
+                color: var(--primary);
+                font-family: "roboto-condensed-bold", sans-serif;
+            }
 /* ---------------------------------------------------------------- */
 
 /* FOOTER */
@@ -728,7 +738,7 @@
                 display: block;
             }
 
-            .products .ready-to-live h2{
+            .products .ready-to-live h2, .contact h2{
                 font-size: 40px;
             }
 
@@ -767,7 +777,14 @@
 
     /* MOBILE */
     /* -------------------------------- */
-    @media screen and (max-width: 425px){    
+    @media screen and (max-width: 425px){
+        
+        /* COMMON CSS */
+        /* -------------------------------- */
+        .contact{
+            overflow: unset;
+        }
+
         /* HEADER */
         /* -------------------------------- */
             header .mobile{
@@ -799,8 +816,43 @@
             }
         /* MAIN */
         /* -------------------------------- */
+            /* ----- HOME ----- */
             .home .ready-to-live{
                 top: 33vh;
             }
+
+            /* ----- CONTACT ----- */
+            .contact main{
+                margin-bottom: 100px;
+            }
+
+            .contact form{
+                /* display: grid; */
+                grid-template: auto / 1fr;
+                /* gap: 10px;
+                margin: 25px 10vw 10px;
+                width: calc(100% - 20vw); */
+            }
+
+            .contact #name{
+                grid-area: 1 / 1 / 1 / 1;
+                
+            }
+
+            .contact #mail{
+                grid-area: 2 / 1 / 2 / 1;
+            }
+
+            .contact #message{
+                grid-area: 3 / 1 / 3 / 1;
+                height: 30vh;
+            }
+        
+            /* FOOTER */
+            /* -------------------------------- */
+                /* ----- CONTACT ----- */
+                .contact footer{
+                    position: static;
+                }
     }
 /* ---------------------------------------------------------------- */

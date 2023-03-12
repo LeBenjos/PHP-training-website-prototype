@@ -172,7 +172,7 @@ function contactWait(){
 }
 
 function contactSend(){
-    echo "POST";
+    include "./include/contact_post.php";
 }
 
 ?>

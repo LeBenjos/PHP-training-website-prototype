@@ -12,5 +12,4 @@ switch($methode){
         contactSend();
         break;
 }
-
 ?>
